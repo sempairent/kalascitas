@@ -18,8 +18,7 @@ return new class extends Migration
             $table->string('name',25);
             $table->string('paternal',15);
             $table->string('maternal',15);
-            //$table->date('fechacita');
-           /* $table->string('color',10);*/
+            $table->date('fechacita');
             $table->timestamps();
         });
     }

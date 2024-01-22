@@ -19,6 +19,7 @@ class CitasFactory extends Factory
             'name' => $this->faker->text(15),
             'paternal' => $this->faker->company,
             'maternal' => $this->faker->text(15),
+            'fechacita' => $this->faker->date,
             /*'color' => $this->faker->randomElement($colors)*/
         ];
     }

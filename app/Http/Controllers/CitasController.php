@@ -20,24 +20,25 @@ class CitasController extends Controller
             'name' => 'required|max:50',
             'paternal' => 'required|max:50',
             'maternal' => 'required|max:100',
+            'fechacita' => 'required|date',
            /* 'color' => 'required|max:10'*/
         ]);
-        $car = new Citas($request->input());
-        $car->save();
+        $cita = new Citas($request->input());
+        $cita->save();
         return redirect('citas');
     }
 
     public function update(Request $request, $id)
     {
-        $car = Citas::find($id);
-        $car->fill($request->input())->saveOrFail();
+        $cita = Citas::find($id);
+        $cita->fill($request->input())->saveOrFail();
         return redirect('citas');
     }
 
     public function destroy($id)
     {
-        $car = Citas::find($id);
-        $car->delete();
+        $cita = Citas::find($id);
+        $cita->delete();
         return redirect('citas');
     }
 }
