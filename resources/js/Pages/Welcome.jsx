@@ -27,7 +27,7 @@ export default function Welcome(props) {
                             </Link>
                         ) : (
                             <>
-                            
+
                                 <Link href={route('login')} className="text-sm text-black dark:text-black underline">
                                     <button className='h-12 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow '>
                                         Iniciar Sesión
@@ -70,7 +70,7 @@ export default function Welcome(props) {
                                             <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                                 <thead className="text-xs text-gray-700 uppercase dark:text-gray-400">
                                                     <tr>
-                                                        
+
                                                     </tr>
                                                 </thead>
                                                 <br />
@@ -80,37 +80,37 @@ export default function Welcome(props) {
                                                             Lunes
                                                         </th>
                                                         <td className="px-6 py-4">
-                                                        07:00 - 21:00
+                                                            07:00 - 21:00
                                                         </td>
 
 
                                                     </tr>
-                                                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                                                    <tr className="border-b border-gray-200 dark:border-gray-700">
                                                         <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap  dark:text-white bg-black/30">
                                                             Martes
                                                         </th>
                                                         <td className="px-6 py-4">
-                                                        07:00 - 21:00
+                                                            07:00 - 21:00
                                                         </td>
 
 
                                                     </tr>
-                                                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                                                    <tr className="border-b border-gray-200 dark:border-gray-700">
                                                         <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap  dark:text-white bg-black/30">
                                                             Miercoles
                                                         </th>
                                                         <td className="px-6 py-4">
-                                                        07:00 - 21:00
+                                                            07:00 - 21:00
                                                         </td>
 
 
                                                     </tr>
-                                                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                                                    <tr className="border-b border-gray-200 dark:border-gray-700">
                                                         <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white bg-black/30">
                                                             Jueves
                                                         </th>
                                                         <td className="px-6 py-4">
-                                                        07:00 - 21:00   
+                                                            07:00 - 21:00
                                                         </td>
 
 
@@ -120,7 +120,7 @@ export default function Welcome(props) {
                                                             viernes
                                                         </th>
                                                         <td className="px-6 py-4">
-                                                        07:00 - 21:00
+                                                            07:00 - 21:00
                                                         </td>
 
 
@@ -130,7 +130,7 @@ export default function Welcome(props) {
                                                             Sabado
                                                         </th>
                                                         <td className="px-6 py-4">
-                                                        08:00 - 20:00
+                                                            08:00 - 20:00
                                                         </td>
 
 
@@ -140,7 +140,7 @@ export default function Welcome(props) {
                                                             Domingo
                                                         </th>
                                                         <td className="px-6 py-4">
-                                                        08:00 - 20:00
+                                                            08:00 - 20:00
                                                         </td>
 
 
