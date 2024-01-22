@@ -76,7 +76,7 @@ export default function Welcome(props) {
                                                 <br />
                                                 <tbody>
                                                     <tr className="border-b border-gray-200 dark:border-gray-700 ">
-                                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white bg-black/30">
+                                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap  dark:text-white bg-black/30">
                                                             Lunes
                                                         </th>
                                                         <td className="px-6 py-4">
@@ -86,7 +86,7 @@ export default function Welcome(props) {
 
                                                     </tr>
                                                     <tr class="border-b border-gray-200 dark:border-gray-700">
-                                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white bg-black/30">
+                                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap  dark:text-white bg-black/30">
                                                             Martes
                                                         </th>
                                                         <td className="px-6 py-4">
@@ -96,7 +96,7 @@ export default function Welcome(props) {
 
                                                     </tr>
                                                     <tr class="border-b border-gray-200 dark:border-gray-700">
-                                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white bg-black/30">
+                                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap  dark:text-white bg-black/30">
                                                             Miercoles
                                                         </th>
                                                         <td className="px-6 py-4">
@@ -106,7 +106,7 @@ export default function Welcome(props) {
 
                                                     </tr>
                                                     <tr class="border-b border-gray-200 dark:border-gray-700">
-                                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white bg-black/30">
+                                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white bg-black/30">
                                                             Jueves
                                                         </th>
                                                         <td className="px-6 py-4">
@@ -116,7 +116,7 @@ export default function Welcome(props) {
 
                                                     </tr>
                                                     <tr>
-                                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white bg-black/30">
+                                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap  dark:text-white bg-black/30">
                                                             viernes
                                                         </th>
                                                         <td className="px-6 py-4">
@@ -126,7 +126,7 @@ export default function Welcome(props) {
 
                                                     </tr>
                                                     <tr>
-                                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white bg-black/30">
+                                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap  dark:text-white bg-black/30">
                                                             Sabado
                                                         </th>
                                                         <td className="px-6 py-4">
@@ -136,7 +136,7 @@ export default function Welcome(props) {
 
                                                     </tr>
                                                     <tr>
-                                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white bg-black/30">
+                                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white bg-black/30">
                                                             Domingo
                                                         </th>
                                                         <td className="px-6 py-4">
