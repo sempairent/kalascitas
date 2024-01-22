@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cars;
+use App\Models\Citas;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
-class CarsController extends Controller
+class CitasController extends Controller
 {
     public function index()
     {
-        $cars = Cars::all();
-        return Inertia::render('Cars/Index',['cars'=>$cars]);
+        $citas = Citas::all();
+        return Inertia::render('Citas/Index',['citas'=>$citas]);
     }
 
     public function store(Request $request)
@@ -22,22 +22,22 @@ class CarsController extends Controller
             'maternal' => 'required|max:100',
            /* 'color' => 'required|max:10'*/
         ]);
-        $car = new Cars($request->input());
+        $car = new Citas($request->input());
         $car->save();
-        return redirect('cars');
+        return redirect('citas');
     }
 
     public function update(Request $request, $id)
     {
-        $car = Cars::find($id);
+        $car = Citas::find($id);
         $car->fill($request->input())->saveOrFail();
-        return redirect('cars');
+        return redirect('citas');
     }
 
     public function destroy($id)
     {
-        $car = Cars::find($id);
+        $car = Citas::find($id);
         $car->delete();
-        return redirect('cars');
+        return redirect('citas');
     }
 }

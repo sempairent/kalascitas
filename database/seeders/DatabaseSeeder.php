@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-use App\Models\Cars;
+use App\Models\Citas;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Cars::factory(10)->create();
+        Citas::factory(10)->create();
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

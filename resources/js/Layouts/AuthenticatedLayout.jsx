@@ -37,7 +37,7 @@ export default function Authenticated({ auth, header, children }) {
                                 </NavLink>
                             </div>
                             <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <NavLink href={route('cars.index')} active={route().current('cars.index')}>
+                                <NavLink href={route('citas.index')} active={route().current('citas.index')}>
                                     Mis citas
                                 </NavLink>
                             </div>
@@ -124,7 +124,7 @@ export default function Authenticated({ auth, header, children }) {
                         </ResponsiveNavLink>
                     </div>
                     <div className="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink href={route('cars.index')} active={route().current('cars.index')}>
+                        <ResponsiveNavLink href={route('citas.index')} active={route().current('citas.index')}>
                             Mis Citas
                         </ResponsiveNavLink>
                     </div>

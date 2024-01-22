@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cars', function (Blueprint $table) {
+        Schema::create('citas', function (Blueprint $table) {
             $table->id();
             $table->string('name',25);
             $table->string('paternal',15);
             $table->string('maternal',15);
-            $table->date('fechacita');
+            //$table->date('fechacita');
            /* $table->string('color',10);*/
             $table->timestamps();
         });
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cars');
+        Schema::dropIfExists('citas');
     }
 };
