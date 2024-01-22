@@ -63,10 +63,7 @@ export default function Dashboard(props) {
                         reset('fechacita');
                         FechaInput.current.focus();
                     }
-                    /*if(errors.color){
-                        reset('color');
-                        ColorInput.current.focus();
-                    }*/
+                  
                 }
             });
         }
@@ -90,10 +87,7 @@ export default function Dashboard(props) {
                         reset('fechacita');
                         FechaInput.current.focus();
                     }
-                    /*if(errors.color){
-                        reset('color');
-                        ColorInput.current.focus();
-                    }*/
+                 
                 }
             });
         }
@@ -134,7 +128,7 @@ export default function Dashboard(props) {
                         <div className='mt-3 mb-3 flex justify-end'>
                             <PrimaryButton onClick={() => openModal(1)}>
                                 <i className='fa-solid fa-plus-circle'></i>
-                                Añadir
+                                 Añadir
                             </PrimaryButton>
                         </div>
                     </div>

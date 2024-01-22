@@ -1,5 +1,10 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
+import NavLink from '@/Components/NavLink';
+import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
+import { Link } from '@inertiajs/react';
+
+
 
 export default function Dashboard(props) {
     return (
@@ -8,7 +13,7 @@ export default function Dashboard(props) {
             errors={props.errors}
            /* header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>}*/
         >
-            <Head title="Dashboard" />
+            <Head title="Inicio" />
 
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -32,13 +37,15 @@ export default function Dashboard(props) {
                                 className="w-full sm:w-15 bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-8 py-4 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
                             >
                                 <div className="text-left rtl:text-right">
+
                                     <div className="-mt-1 font-sans text-sm font-semibold">
                                         Consulta médica
                                     </div>
+                                
                                 </div>
                             </a>
                             <a
-                                href="#"
+                                href="/citas"
                                 className="w-full sm:w-15 bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-8 py-4 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
                             >
                                 <div className="text-left rtl:text-right">
@@ -64,7 +71,7 @@ export default function Dashboard(props) {
                                 </div>
                             </a>
                             <a
-                                href="#"
+                                href="citas"
                                 className="w-full sm:w-15 bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-8 py-4 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
                             >
                                 <div className="text-left rtl:text-right">
