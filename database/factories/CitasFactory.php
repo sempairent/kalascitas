@@ -20,6 +20,7 @@ class CitasFactory extends Factory
             'paternal' => $this->faker->company,
             'maternal' => $this->faker->text(15),
             'fechacita' => $this->faker->date,
+            'horacita' => $this->faker->time('H:i'),
             /*'color' => $this->faker->randomElement($colors)*/
         ];
     }

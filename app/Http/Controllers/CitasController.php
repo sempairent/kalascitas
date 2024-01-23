@@ -21,7 +21,8 @@ class CitasController extends Controller
             'paternal' => 'required|max:50',
             'maternal' => 'required|max:100',
             'fechacita' => 'required|date',
-           /* 'color' => 'required|max:10'*/
+            'horacita' => 'required|date_format:H:i', 
+           
         ]);
         $cita = new Citas($request->input());
         $cita->save();

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('paternal',15);
             $table->string('maternal',15);
             $table->date('fechacita');
+            $table->time('horacita');
             $table->timestamps();
         });
     }

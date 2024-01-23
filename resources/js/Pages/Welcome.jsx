@@ -1,5 +1,6 @@
 import { Link, Head } from '@inertiajs/react';
-import ApplicationLogo from '@/Components/ApplicationLogo';
+
+import WelcomeLogo from '@/Components/WelcomeLogo';
 import Pasillo from '@/Components/pasillo.jpg';
 
 export default function Welcome(props) {
@@ -10,8 +11,9 @@ export default function Welcome(props) {
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: 'flex-start',
+        justifyContent: 'flex-center',
+        paddingLeft: '45px',
     };
     return (
         <>
@@ -28,7 +30,7 @@ export default function Welcome(props) {
                         ) : (
                             <>
 
-                                <Link href={route('login')} className="text-sm text-black dark:text-black underline">
+                                <Link href={route('login')} className="text-sm text-black dark:text-black underline ">
                                     <button className='h-12 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow '>
                                         Iniciar Sesión
                                     </button>
@@ -47,14 +49,14 @@ export default function Welcome(props) {
                     </div>
 
 
-                    <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                        <br /><br /><br /><br />
-                        <ApplicationLogo className="block h-9 w-auto fill-current text-gray-800" />
+                    <div className="max-w-6xl mx-auto sm:px-6 lg:px-8 text-left">
+                       
+                        <WelcomeLogo className="block h-15 w-auto fill-current text-gray-800" />
 
-                        <div className="mt-8 overflow-hidden shadow sm:rounded-lg backdrop-brightness-50 bg-black/30 ...">
+                        <div className="mt-2 overflow-hidden shadow sm:rounded-lg backdrop-brightness-50 bg-black/30 ...">
                             <div className="grid grid-cols-1 md:grid-cols-1 px-10">
-                                <div className="p-10">
-                                    <div className="flex items-center ">
+                                <div className="p-8">
+                                    <div className="flex items-start">
 
 
                                         <div className="ml-5 text-lg leading-7 font-semibold text-white ">

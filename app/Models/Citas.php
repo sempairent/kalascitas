@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Citas extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','paternal','maternal','fechacita'];
+    protected $fillable = ['name','paternal','maternal','fechacita','horacita'];
 }

@@ -11,7 +11,7 @@ export default function Dashboard(props) {
         <AuthenticatedLayout
             auth={props.auth}
             errors={props.errors}
-           /* header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>}*/
+        /* header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>}*/
         >
             <Head title="Inicio" />
 
@@ -33,15 +33,15 @@ export default function Dashboard(props) {
                         <br />
                         <div className="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
                             <a
-                                href="#"
+                                href="/citas"
                                 className="w-full sm:w-15 bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-8 py-4 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
                             >
                                 <div className="text-left rtl:text-right">
 
                                     <div className="-mt-1 font-sans text-sm font-semibold">
-                                        Consulta médica
+                                        Registrar nueva cita
                                     </div>
-                                
+
                                 </div>
                             </a>
                             <a
@@ -71,12 +71,12 @@ export default function Dashboard(props) {
                                 </div>
                             </a>
                             <a
-                                href="citas"
+                                href="/especialidades"
                                 className="w-full sm:w-15 bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-8 py-4 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
                             >
                                 <div className="text-left rtl:text-right">
                                     <div className="-mt-1 font-sans text-sm font-semibold">
-                                        Registrar nueva cita
+                                        Especialidades
                                     </div>
                                 </div>
                             </a>

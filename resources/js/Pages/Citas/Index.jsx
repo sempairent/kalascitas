@@ -21,21 +21,22 @@ export default function Dashboard(props) {
     const MakeInput = useRef();
     const ModelInput = useRef();
     const FechaInput = useRef();
+    const HoraInput = useRef();
     //const ColorInput = useRef();
     const { data, setData, delete: destroy, post, put,
         processing, reset, errors } = useForm({
-            id: '', name: '', paternal: '', maternal: '', fechacita: ''
+            id: '', name: '', paternal: '', maternal: '', fechacita: '', horacita: ''
         });
-    const openModal = (op, id, name, paternal, maternal, fechacita) => {
+    const openModal = (op, id, name, paternal, maternal, fechacita, horacita) => {
         setModal(true);
         setOperation(op);
-        setData({ name: '', paternal: '', maternal: '' , fechacita:'' });
+        setData({ name: '', paternal: '', maternal: '', fechacita: '' , horacita: ''});
         if (op === 1) {
             setTitle('Añadir cita');
         }
         else {
             setTitle('Modificar cita');
-            setData({ id: id, name: name, paternal: paternal, maternal: maternal, fechacita: fechacita });
+            setData({ id: id, name: name, paternal: paternal, maternal: maternal, fechacita: fechacita, horacita: horacita });
         }
     }
     const closeModal = () => {
@@ -43,6 +44,32 @@ export default function Dashboard(props) {
     }
     const save = (e) => {
         e.preventDefault();
+        const currentDate = new Date();
+
+        if (operation === 1) {
+            const fechaCita = new Date(data.fechacita);
+
+
+            currentDate.setHours(0, 0, 0, 0);
+
+            if (fechaCita < currentDate) {
+                Swal.fire({ title: 'Error', text: 'La fecha de la cita debe ser a partir de hoy.', icon: 'error' });
+                return;
+            }
+        } else if (operation === 2) {
+            // Lógica para la edición de citas
+            const fechaCita = new Date(data.fechacita);
+
+            currentDate.setHours(0, 0, 0, 0);
+
+            if (fechaCita < currentDate) {
+                Swal.fire({ title: 'Error', text: 'La fecha de la cita debe ser a partir de hoy.', icon: 'error' });
+                return;
+            }
+        }
+
+
+
         if (operation === 1) {
             post(route('citas.store'), {
                 onSuccess: () => { ok('Cita Guardada') },
@@ -63,7 +90,11 @@ export default function Dashboard(props) {
                         reset('fechacita');
                         FechaInput.current.focus();
                     }
-                  
+                    if (errors.horacita) {
+                        reset('horacita');
+                        HoraInput.current.focus();
+                    }
+
                 }
             });
         }
@@ -87,7 +118,11 @@ export default function Dashboard(props) {
                         reset('fechacita');
                         FechaInput.current.focus();
                     }
-                 
+                    if (errors.horacita) {
+                        reset('horacita');
+                        HoraInput.current.focus();
+                    }
+
                 }
             });
         }
@@ -128,7 +163,7 @@ export default function Dashboard(props) {
                         <div className='mt-3 mb-3 flex justify-end'>
                             <PrimaryButton onClick={() => openModal(1)}>
                                 <i className='fa-solid fa-plus-circle'></i>
-                                 Añadir
+                                Añadir
                             </PrimaryButton>
                         </div>
                     </div>
@@ -141,6 +176,7 @@ export default function Dashboard(props) {
                                     <th className='px-2 py-2'>A. Paterno</th>
                                     <th className='px-2 py-2'>A. Materno</th>
                                     <th className='px-2 py-2'>Fecha de Cita</th>
+                                    <th className='px-2 py-2'>Hora de Cita</th>
                                     <th className='px-2 py-2'>editar</th>
                                     <th className='px-2 py-2'>eliminar</th>
                                 </tr>
@@ -153,9 +189,10 @@ export default function Dashboard(props) {
                                         <td className='border border-gray-400 px-2 py-2'>{cita.paternal}</td>
                                         <td className='border border-gray-400 px-2 py-2'>{cita.maternal}</td>
                                         <td className='border border-gray-400 px-2 py-2'>{cita.fechacita}</td>
+                                        <td className='border border-gray-400 px-2 py-2'>{cita.horacita}</td>
                                         <td className='border border-gray-400 px-2 py-2'>
                                             <WarningButton
-                                                onClick={() => openModal(2, cita.id, cita.name, cita.paternal, cita.maternal, cita.fechacita)}>
+                                                onClick={() => openModal(2, cita.id, cita.name, cita.paternal, cita.maternal, cita.fechacita, cita.horacita)}>
                                                 <i className='fa-solid fa-edit'></i>
                                             </WarningButton>
                                         </td>
@@ -208,6 +245,16 @@ export default function Dashboard(props) {
                                     className="mt-1 block w-3/4"></TextInput>
                                 <InputError message={errors.fechacita} className="mt-2"></InputError>
                             </div>
+
+                            <div className='mt-6'>
+                                <InputLabel for="horacita" value="Hora de la Cita"></InputLabel>
+                                <TextInput type="time" id="horacita" name="horacita" ref={HoraInput}
+                                    value={data.horacita} required='required'
+                                    handleChange={(e) => setData('horacita', e.target.value)}
+                                    className="mt-1 block w-3/4"></TextInput>
+                                <InputError message={errors.horacita} className="mt-2"></InputError>
+                            </div>
+
 
 
 
